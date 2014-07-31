@@ -1,5 +1,9 @@
 TWADE
 =====
+
+[![Code Climate](https://codeclimate.com/github/theneiam/twade/badges/gpa.svg)](https://codeclimate.com/github/theneiam/twade)
+[![Latest Stable Version](https://poser.pugx.org/theneiam/twade/v/stable.svg)](https://packagist.org/packages/theneiam/twade) [![Total Downloads](https://poser.pugx.org/theneiam/twade/downloads.svg)](https://packagist.org/packages/theneiam/twade) [![Latest Unstable Version](https://poser.pugx.org/theneiam/twade/v/unstable.svg)](https://packagist.org/packages/theneiam/twade) [![License](https://poser.pugx.org/theneiam/twade/license.svg)](https://packagist.org/packages/theneiam/twade)
+
 TwAde is the plugin for the [SEO Toaster](http://www.seotoaster.com/) CMS
 
 ## INSTALLATION

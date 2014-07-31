@@ -1,6 +1,6 @@
 TWADE
 =====
-TwAde is the plugin for the Seotoaster 2.x SMS
+TwAde is the plugin for the Seotoaster 2.x CMS
 
 ## INSTALLATION
 

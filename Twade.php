@@ -24,7 +24,7 @@ class Twade extends Tools_Plugins_Abstract
         $this->_view = Twade\Engine\View::create($options);
 
         // Assign some vars
-        $this->_view->welcome = 'Welcome to the Twage plugin!';
+        $this->_view->welcome = 'Welcome to the TwAde plugin!';
         $this->_view->engine   = 'Twig';
 
         // Disco!
@@ -44,7 +44,7 @@ class Twade extends Tools_Plugins_Abstract
         $this->_view = Twade\Engine\View::create($options);
 
         // Assign some vars
-        $this->_view->welcome = 'Welcome to the Twage plugin!';
+        $this->_view->welcome = 'Welcome to the TwAde plugin!';
         $this->_view->engine   = 'Blade';
 
         // Disco!

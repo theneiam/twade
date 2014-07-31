@@ -1,6 +1,6 @@
 TWADE
 =====
-TwAde is the plugin for the Seotoaster 2.x CMS
+TwAde is the plugin for the [SEO Toaster](http://www.seotoaster.com/) CMS
 
 ## INSTALLATION
 
@@ -43,21 +43,20 @@ Just change the configuration options and that's it!
 *you can find some demos in the Twade.php*
 
 ```php
+// Define config options. We will use Twig engine
+$options = array(
+    'engine'        => Twade\Engine\View::VIEW_ENGINE_TWIG,
+    'templatesPath' => __DIR__ . '/example/twig/',
+    'cache'         => __DIR__ . '/../../cache/'
+);
 
-    // Define config options. We will use Twig engine
-    $options = array(
-        'engine'        => Twade\Engine\View::VIEW_ENGINE_TWIG,
-        'templatesPath' => __DIR__ . '/example/twig/',
-        'cache'         => __DIR__ . '/../../cache/'
-    );
+// Now, let's create a view and enjoy
+$view = Twade\Engine\View::create($options);
 
-    // Now, let's create a view and enjoy
-    $view = Twade\Engine\View::create($options);
+// Assign some vars
+$view->welcome = 'Welcome to the Twage plugin!';
+$view->engine  = 'Twig';
 
-    // Assign some vars
-    $view->welcome = 'Welcome to the Twage plugin!';
-    $view->engine  = 'Twig';
-
-    // Disco!
-    echo $view->render('welcome.twig');
+// Disco!
+echo $view->render('welcome.twig');
 ```

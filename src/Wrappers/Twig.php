@@ -1,13 +1,18 @@
 <?php
+
 /**
- * Twigger
+ * ****************************************************
+ *
+ * Twig.php
  *
  * @author: Eugene I. Nezhuta <eugene.nezhuta@gmail.com>
+ *
+ * *****************************************************
  */
 
 namespace Twade\Engine\Wrappers;
 
-class Twigger extends Base
+class Twig extends Base
 {
     public function __construct($options)
     {
@@ -18,6 +23,13 @@ class Twigger extends Base
         $this->engine = new \Twig_Environment(
             new \Twig_Loader_Filesystem($options['templatesPath'])
         );
+
+        // load twig extensions
+        if (!empty($options['extensions'])) {
+            array_walk($options['extensions'], function($extension) {
+                $this->engine->addExtension(new $extension());
+            });
+        }
     }
 
     /**

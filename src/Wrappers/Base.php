@@ -1,16 +1,21 @@
 <?php
+
 /**
- * Base.php
- * 
- * Date: 7/28/14
- * Time: 11:19 PM
+ * ****************************************************
+ *
+ * Base.php contains TwAde common wrapper class.
+ *
  * @author: Eugene I. Nezhuta <eugene.nezhuta@gmail.com>
+ *
+ * *****************************************************
  */
 
 namespace Twade\Engine\Wrappers;
 
+use Twade\Engine\Exceptions\ViewVariableNotSetException;
+use Twade\Engine\Interfaces\Engine;
 
-abstract class Base
+abstract class Base implements Engine
 {
     protected $engine    = null;
 
@@ -24,7 +29,7 @@ abstract class Base
     public function __get($name)
     {
         if (!isset($this->variables[$name])) {
-            throw new \Exception('TemplateVariableNotSet', 400);
+            throw new ViewVariableNotSetException(sprintf('Variable %s is not set.', $name));
         }
     }
 
@@ -40,5 +45,5 @@ abstract class Base
         return isset($this->variables[$name]);
     }
 
-    abstract public function render($template, $variables);
+    abstract public function render($template, $variables = array());
 } 

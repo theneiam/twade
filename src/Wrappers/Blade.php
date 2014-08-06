@@ -1,8 +1,13 @@
 <?php
+
 /**
- * Blader
+ * ****************************************************
+ *
+ * Blade.php
  *
  * @author: Eugene I. Nezhuta <eugene.nezhuta@gmail.com>
+ *
+ * *****************************************************
  */
 
 namespace Twade\Engine\Wrappers;
@@ -17,7 +22,7 @@ use Illuminate\View\Compilers\BladeCompiler;
 use Illuminate\View\FileViewFinder;
 use Illuminate\View\Factory;
 
-class Blader extends Base
+class Blade extends Base
 {
     /**
      * Array containg paths where to look for blade files

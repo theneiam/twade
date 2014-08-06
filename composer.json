@@ -8,13 +8,18 @@
     "require" : {
         "php": ">=5.4",
         "illuminate/view": "4.2.*",
-        "twig/twig": "1.*"
+        "twig/twig": "1.*",
+        "mustache/mustache": "~2.5",
+        "twig/extensions": "1.1.*@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",
         "squizlabs/php_codesniffer": "1.*"
     },
     "autoload": {
+        "psr-0": {
+            "Twade\\Tests": "tests"
+        },
         "psr-4": {
             "Twade\\Engine\\": "src"
         }

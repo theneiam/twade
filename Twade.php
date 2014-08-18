@@ -53,4 +53,25 @@ class Twade extends Tools_Plugins_Abstract
         // Disco!
         echo $this->_view->render('welcome');
     }
+
+    public function mustacheAction()
+    {
+        // Define options
+        $options = array(
+            'engine'        => 'Mustache',
+            'templatesPath' => __DIR__ . '/example/mustache',
+            'cache'         => __DIR__ . '/../../cache/'
+        );
+
+        // Create view
+        $this->_view = \Twade\Engine\Factory::create($options);
+
+        // Assign some vars
+        $this->_view->welcome = 'Welcome to the TwAde plugin!';
+        $this->_view->engine  = 'Mustache';
+
+        // Disco!
+        $r = $this->_view->render('welcome');
+        echo $this->_view->render('welcome');
+    }
 } 

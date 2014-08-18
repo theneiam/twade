@@ -9,7 +9,7 @@
         "php": ">=5.4",
         "illuminate/view": "4.2.*",
         "twig/twig": "1.*",
-        "mustache/mustache": "~2.5",
+        "mustache/mustache": "2.6.1",
         "twig/extensions": "1.1.*@dev"
     },
     "require-dev": {

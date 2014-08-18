@@ -6,6 +6,10 @@ TWADE
 
 TwAde is the plugin for the [SEO Toaster](http://www.seotoaster.com/) CMS
 
+With TwAde it is very easy to start using the power of the popular template engines, such as
+[Twig](http://twig.sensiolabs.org/), [Blade](http://laravel.com/docs/templates) or [Mustache](https://github.com/bobthecow/mustache.php/wiki),
+within your plugins or, even, in the SEO Toaster's core!
+
 ## INSTALLATION
 
 ### Manual

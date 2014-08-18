@@ -71,7 +71,6 @@ class Twade extends Tools_Plugins_Abstract
         $this->_view->engine  = 'Mustache';
 
         // Disco!
-        $r = $this->_view->render('welcome');
         echo $this->_view->render('welcome');
     }
 } 

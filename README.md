@@ -40,27 +40,43 @@ $ composer install
 
 ## USEAGE
 
-Example of how to use power of the Twig engine with TwAde
-But if you would like to use Blade, it is as easy as pie,
-Just change the configuration options and that's it!
-
+Example of how to use power of the famous template engines with TwAde.
 *you can find some demos in the Twade.php*
 
 ```php
-// Define config options. We will use Twig engine
+// Define config options.
+
+// Twig engine options. It supports Twig extensions now!
 $options = array(
-    'engine'        => Twade\Engine\View::VIEW_ENGINE_TWIG,
+    'engine'        => 'Twig',
     'templatesPath' => __DIR__ . '/example/twig/',
+    'cache'         => __DIR__ . '/../../cache/',
+    'extensions'    => array(
+        'Twig_Extensions_Extension_I18n' // The i18n extension only works if the PHP gettext extension is enabled.
+    )
+);
+
+// Blade engine options
+$options = array(
+    'engine'        => 'Blade',
+    'templatesPath' => __DIR__ . '/example/blade/',
+    'cache'         => __DIR__ . '/../../cache/'
+);
+
+// Mustache engine options. Yeah! Twade supports mustache from now on!
+$options = array(
+    'engine'        => 'Mustache',
+    'templatesPath' => __DIR__ . '/example/mustache',
     'cache'         => __DIR__ . '/../../cache/'
 );
 
 // Now, let's create a view and enjoy
-$view = Twade\Engine\View::create($options);
+// Create view
+$view = \Twade\Engine\Factory::create($options);
 
 // Assign some vars
-$view->welcome = 'Welcome to the Twage plugin!';
-$view->engine  = 'Twig';
+$view->welcome = 'Welcome to the TwAde plugin!';
 
 // Disco!
-echo $view->render('welcome.twig');
+echo $this->_view->render('welcome');
 ```
